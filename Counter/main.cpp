@@ -1,27 +1,23 @@
-Counter
-
 #include <iostream>
 using namespace std;
 class Counter{
 private:
-     int count;
+     int count = 1;
 public:
     Counter(int count){
         this -> count = count;
     }
     Counter(){};
-    void increase(int countin){
-        countin += 1;
+    void increase(){
+        count += 1;
     }
-    void decrease(int countin){
-        countin -= 1;
+    void decrease(){
+        count -= 1;
     }
     int current(){
         return count;
     }
-    void set_count(int countin){
-        count = countin;
-    }
+    
 };
 
 int main(){
@@ -40,10 +36,10 @@ int main(){
             cout << "Введите команду ('+', '-', '=' или 'X'): ";
             cin >> sign;
             if (sign == "+") {
-                counter.increase(count);
+                counter.increase();
             }
             if (sign == "-"){
-                counter.decrease(count);
+                counter.decrease();
             }
             if (sign == "="){
                 count = counter.current();
@@ -57,15 +53,15 @@ int main(){
       }
       flag = 1;
       if (yes_no == "нет"){
-          counter.set_count(count);
+          counter = Counter();
           while(flag == 1){
           cout << "Введите команду ('+', '-', '=' или 'X'): ";
           cin >> sign;
           if (sign == "+"){
-              counter.increase(count);
+              counter.increase();
           }
           if (sign == "-"){
-              counter.decrease(count);
+              counter.decrease();
           }
           if (sign == "="){
               count = counter.current();
@@ -79,4 +75,3 @@ int main(){
             }
     }
   }
-
