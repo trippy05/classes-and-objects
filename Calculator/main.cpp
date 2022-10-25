@@ -44,19 +44,19 @@ public:
     }
     bool set_num1(double num1){
         if (num1 != 0){
+            this -> num1 = num1;
             return true;
         }
         else {
-            this -> num1 = num1;
             return false;
         }
     }
     bool set_num2(double num2){
         if (num2 != 0){
+            this -> num2 = num2;
             return true;
         }
-        else {
-            this -> num2 = num2;
+        else{
             return false;
         }
     }
@@ -65,7 +65,7 @@ public:
 
 };
 int main() {
-    double num1, num2;
+    double num1 = 1, num2 = 1;
     Calculator calc(num1, num2);
     double sum, mult, sub12, sub21, div12, div21;
     bool set1 = true, set2 = true;
