@@ -31,8 +31,8 @@ int main(){
       if (yes_no == "да"){
           cout << "Введите начальное значение счётчика: ";
           cin >> count;
+          counter = Counter(count);
           while (flag == 1){
-            counter = Counter(count);
             cout << "Введите команду ('+', '-', '=' или 'X'): ";
             cin >> sign;
             if (sign == "+") {
